@@ -1,0 +1,32 @@
+.navbar {
+  max-width: 1200px;
+  margin: 30px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 28px;
+  background: #d6dfdb;
+  border-radius: 40px;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+}
+
+.brand span {
+  font-size: 20px;
+  font-weight: 500;
+  color: #334548;
+  font-family: "Playfair Display", serif; /* editorial feel */
+}
