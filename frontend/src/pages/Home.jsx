@@ -7,7 +7,10 @@ import WallOfLove from "../components/WallOfLove";
 import MenuOverlay from "../components/MenuOverlay";
 import { useState } from "react";
 import MenuButton from "../components/MenuButton";
+
+
 const Home = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main style={{ padding: "80px 40px" }}>
       <h1>Welcome to Bloom Branding</h1>

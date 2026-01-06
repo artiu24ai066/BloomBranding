@@ -4,7 +4,7 @@ import "./App.css";
 
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  
   return (
     <>
     <Home />
