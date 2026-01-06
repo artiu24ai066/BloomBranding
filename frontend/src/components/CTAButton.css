@@ -1,62 +1,141 @@
-.cta {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
 
-  width: 54px;
-  height: 54px;
-  padding: 7px;
-
-  background: #445458;
-  border-radius: 32px;
-  border: none;
-  cursor: pointer;
-
-  overflow: hidden;
-  transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* Arrow circle */
-.cta-arrow {
-  min-width: 40px;
-  height: 40px;
+/* BODY */
+body {
+  font-family: "Mukta", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #445458;
-  color: #ffffff;
-  border-radius: 50%;
-  font-size: 18px;
-
-  transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0;
+  min-height: 100vh;
+  background: #f3f8fa;
 }
 
-/* Hidden text */
-.cta-text {
-  white-space: nowrap;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  color: #2f3e41;
-
-  opacity: 0;
-  transform: translateX(-12px);
-  transition: all 0.35s ease;
+/* BUTTON BASE */
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
 }
 
-/* ✨ Hover – Emily in Paris effect */
-.cta:hover {
-  width: 220px;
-  background: #77c7c6;
+/* MAIN BUTTON */
+button.learn-more {
+  width: 12rem;
 }
 
-.cta:hover .cta-arrow {
-  background: #77c7c6;
+/* CIRCLE */
+button.learn-more .circle {
+  position: relative;
+  display: block;
+
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.625rem;
+
+  background: #282936;
+
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
-.cta:hover .cta-text {
-  opacity: 1;
-  transform: translateX(0);
+/* ICON */
+button.learn-more .circle .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  background: #fff;
+
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+/* ARROW */
+button.learn-more .circle .icon.arrow {
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+/* ARROW HEAD */
+button.learn-more .circle .icon.arrow::before {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  right: 0.0625rem;
+
+  width: 0.625rem;
+  height: 0.625rem;
+
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+
+  transform: rotate(45deg);
+}
+
+/* TEXT */
+button.learn-more .button-text {
+  position: absolute;
+  inset: 0;
+
+  margin-left: 1.85rem;
+  padding: 0.75rem 0;
+
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #282936;
+
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+/* HOVER EFFECT */
+button.learn-more:hover .circle {
+  width: 100%;
+}
+
+button.learn-more:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translateX(1rem);
+}
+
+button.learn-more:hover .button-text {
+  color: #fff;
+}
+
+/* GRID SUPPORT */
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      ". main main ."
+      ". main main .";
+    gap: 0.625rem;
+  }
+
+  #container {
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
+  }
 }

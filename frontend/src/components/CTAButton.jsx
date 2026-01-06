@@ -1,11 +1,15 @@
 import "./CTAButton.css";
 
-const CTAButton = () => {
+const CTAButton = ({ prompt = "View Experiences" }) => {
   return (
-    <button className="cta">
-      <span className="cta-arrow">→</span>
-      <span className="cta-text">Let’s get Started</span>
-    </button>
+    <div id="container">
+  <button class="learn-more">
+    <span class="circle" aria-hidden="true">
+      <span class="icon arrow"></span>
+    </span>
+    <span class="button-text">{prompt}</span>
+  </button>
+</div>
   );
 };
 

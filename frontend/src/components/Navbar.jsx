@@ -9,9 +9,10 @@ const Navbar = () => {
         <span>Bloom Branding</span>
       </div>
 
-      <CTAButton />
+      <CTAButton prompt="Let's get started"/>
     </nav>
   );
 };
 
 export default Navbar;
+
