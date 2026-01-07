@@ -4,31 +4,22 @@ import Services from "../components/Services";
 import Work from "../components/Work";
 import Journey from "../components/Journey";
 import WallOfLove from "../components/WallOfLove";
-import MenuOverlay from "../components/MenuOverlay";
-import { useState } from "react";
-import MenuButton from "../components/MenuButton";
-
 
 const Home = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <main style={{ padding: "80px 40px" }}>
-      <h1>Welcome to Bloom Branding</h1>
-      <p>
-        We craft bold brand identities and immersive digital experiences.
-      </p>
-      <div className="app">
-      <MenuButton onClick={() => setMenuOpen(true)} />
-
-      {menuOpen && <MenuOverlay onClose={() => setMenuOpen(false)} />}
-
+    <main style={{ padding: "0" }}>
       <Navbar />
+
+      {/* Hero sits full-bleed so a background video can show behind it */}
       <Hero />
-      <Services />
-      <Work />
-      <Journey />
-      <WallOfLove />
-    </div>
+
+      {/* Remaining site content wrapped in .app panel */}
+      <div className="app">
+        <Services />
+        <Work />
+        <Journey />
+        <WallOfLove />
+      </div>
     </main>
   );
 };

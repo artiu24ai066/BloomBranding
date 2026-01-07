@@ -1,25 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Mukta:700");
 
-/* RESET */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* BODY */
-body {
+/* Scope styles to the CTA container to avoid global layout changes */
+#container {
+  display: inline-block;
   font-family: "Mukta", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: 0;
-  min-height: 100vh;
-  background: #f3f8fa;
 }
 
 /* BUTTON BASE */
@@ -101,7 +85,7 @@ button.learn-more .button-text {
   font-weight: 700;
   line-height: 1.6;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 
   color: #282936;
 
@@ -122,19 +106,9 @@ button.learn-more:hover .button-text {
   color: #fff;
 }
 
-/* GRID SUPPORT */
+/* Optional: grid support for placing the CTA when needed — scoped to parent */
 @supports (display: grid) {
-  body {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-      ". main main ."
-      ". main main .";
-    gap: 0.625rem;
-  }
-
   #container {
-    grid-area: main;
     align-self: center;
     justify-self: center;
   }
