@@ -1,0 +1,168 @@
+.contact-section {
+  background-color: #4a525c;
+  color: #eaeaea;
+  padding: 80px 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+
+  /* IMPORTANT */
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* ---------- TOP SECTION ---------- */
+.top {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+
+.top h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+/* ---------- FLEX SECTION ---------- */
+.flex {
+  display: flex;
+  gap: 60px;
+  position: relative;
+}
+
+/* VERTICAL LINE */
+.flex::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* LEFT */
+.contact-left {
+  flex: 1;
+}
+
+.contact-quote {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.small-text {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* RIGHT */
+.contact-right {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 0;
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: 13px;
+}
+
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+.services-title {
+  margin: 30px 0 15px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+
+.services label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+/* REMOVE DEFAULT CHECKBOX */
+.services input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 25px;
+  height: 14px;
+  border: 1px solid #cfcfcf;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+/* CHECKED BACKGROUND */
+.services input[type="checkbox"]:checked {
+  background-color: #cfcfcf;
+}
+
+/* DRAW THE TICK */
+.services input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 0px;
+  left: 6px;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+
+/* ALIGN TEXT + BOX */
+.services label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #eaeaea;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  min-height: 70px;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #cfcfcf;
+  color: #333;
+  border: none;
+  padding: 8px 24px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #bdbdbd;
+}
+
