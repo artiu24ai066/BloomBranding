@@ -1,5 +1,4 @@
 import CTAButton from "./CTAButton";
-
 const MenuOverlay = ({ onClose }) => {
     const menuItems = [
         { label: "Our Journey", icon: "/menu-icon-journey.svg", color: "journey" },
