@@ -21,12 +21,14 @@ const MenuOverlay = ({ onClose }) => {
             {/* Main Content */}
             <div className="menu-content">
                 <div className="menu-links">
+                    <h3 className="discover">Discover More</h3>
+                    {/* <h3>Discover More</h3> */}
                     {menuItems.map((item, index) => (
                         <button 
                             key={index}
                             className={`menu-link ${index === 0 ? "active" : ""} ${item.color}`}
                         >
-                            <img src={item.icon} alt={item.label} className="menu-icon" />
+                            <img src={item.icon} className="menu-icon" />
                             <span>{item.label}</span>
                         </button>
                     ))}
