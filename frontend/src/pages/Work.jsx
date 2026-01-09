@@ -1,9 +1,14 @@
 import "./OurWork.css";
-import WorkCard from "../components/WorkCard";
+import WorkCardPair from "../components/WorkCardPair";
+import Navbar from "../components/Navbar";
+import BloomValues from "../components/BloomValues";
+import Footer from '../components/Footer';
 function OurWork() {
   return (
-    <section className="our-work">
+<>
+<Navbar />
 
+    <section className="our-work">
       {/* TOP SECTION */}
       <div className="ourwork-top">
         <div className="ourwork-text">
@@ -31,13 +36,19 @@ function OurWork() {
           Branding that you need — indeed •
         </div>
       </div>
+    <div className="work-scroll">
 
-     <WorkCard />
-     <WorkCard />
-     <WorkCard />
+     <WorkCardPair />
+     <WorkCardPair />
+     <WorkCardPair />
       
-
+    </div>
+    <div className="Bloom">
+      <BloomValues />
+    </div>
+    <Footer />
     </section>
+    </>
   );
 }
 

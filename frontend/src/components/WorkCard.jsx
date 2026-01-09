@@ -1,27 +1,22 @@
 import "./WordCard.css";
+import prod1 from "../assets/prod1.png";
 
 function WorkCard({
-  leftBg = "teal",
-  rightBg = "beige",
-  leftText = "Text - related",
-  rightText = "Text - related",
+  bg = "teal",
+  text = "Text - related",
 }) {
   return (
-    <div className="work-card">
-      <div className="work-card-images">
-        <div className={`work-img ${leftBg}`}>
-          <span>Work - image</span>
-        </div>
+    <div className="hover-card">
 
-        <div className={`work-img ${rightBg}`}>
-          <span>Work - image</span>
+      <div className="image-wrapper">
+        <img src={prod1} alt="Work-image" />
+
+        {/* OVERLAY TEXT */}
+        <div className="image-overlay1">
+          <p>{text}</p>
         </div>
       </div>
 
-      <div className="work-card-text">
-        <p>{leftText}</p>
-        <p>{rightText}</p>
-      </div>
     </div>
   );
 }

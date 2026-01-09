@@ -1,5 +1,5 @@
 import "./Contact.css";
-
+import Footer from "../components/Footer";
 function Contact() {
   return (
     <section className="contact-section">
@@ -57,6 +57,10 @@ function Contact() {
         </div>
         </div>
 
+      </div>
+      <div className="foot">
+
+      <Footer/>
       </div>
     </section>
   );

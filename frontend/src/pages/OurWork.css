@@ -1,29 +1,26 @@
-* {
-  box-sizing: border-box;
-}
+/* ===== OUR WORK PAGE ===== */
 
 .our-work {
-  background: #dcdedb;
-  padding: 60px 40px;
+  background: #d6dfdb;
+  padding: 0;
   font-family: "Segoe UI", sans-serif;
 }
 
-/* TOP */
 .ourwork-top {
   display: flex;
-  margin-bottom: 40px;
+  min-height: 70vh;
 }
 
 .ourwork-text {
   background: #3f4a54;
   color: #eaeaea;
-  padding: 40px;
+  padding: 10px;
   width: 50%;
 }
 
 .ourwork-text h2 {
   font-size: 26px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .ourwork-image {
@@ -35,11 +32,13 @@
   font-size: 20px;
 }
 
-/* MARQUEE */
+/* ===== MARQUEE ===== */
+
 .marquee {
   overflow: hidden;
   background: #e6c59a;
-  margin: 40px 0;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .marquee-track {
@@ -58,3 +57,85 @@
   }
 }
 
+/* spacing before cards */
+.our-work > :nth-child(4) {
+  margin-top: 80px;
+}
+
+/* ===== WORK CARD SPLIT ANIMATION ===== */
+
+.hover-card {
+  position: relative;
+  width: 400px;
+  height: 550px;
+  margin: 10px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #3f4a54;
+}
+
+/* COMMON SLIDE */
+.slide {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;              /* 🔥 IMPORTANT */
+  transform: translateY(-50%);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* IMAGE LAYER */
+.slide-image {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hover-card:hover .slide-image {
+  transform: translateY(-100%);
+}
+
+.hover-card:hover .slide-text {
+  transform: translateY(0);
+}
+
+
+/* IMAGE */
+.work-img {
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.work-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* TEXT LAYER */
+.slide-text {
+  z-index: 1;
+  background: #3f4a54;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hover-card:hover .slide-text {
+  transform: translateY(0);
+}
+
+/* TEXT */
+.slide-text .content p {
+  font-size: 16px;
+  margin: 0;
+}
