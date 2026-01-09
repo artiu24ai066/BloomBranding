@@ -16,7 +16,7 @@ const Home = () => {
       {/* Remaining site content wrapped in .app panel */}
       <div className="app">
         <Services />
-        <Work />
+        <Work to="/Work.jsx"/>
         <Journey />
         <WallOfLove />
       </div>

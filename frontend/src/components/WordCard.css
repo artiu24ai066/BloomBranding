@@ -1,0 +1,52 @@
+.work-card {
+  background: #3f4a54;
+  padding: 40px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.work-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Images container */
+.work-card-images {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Image box */
+.work-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Colors */
+.work-img.teal {
+  background: #6fa1a6;
+}
+
+.work-img.beige {
+  background: #e6c59a;
+}
+
+/* Text */
+.work-card-text {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff;
+  font-size: 14px;
+}

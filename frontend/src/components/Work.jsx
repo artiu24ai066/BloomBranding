@@ -1,4 +1,7 @@
-const Work = () => {
+import { useNavigate } from "react-router-dom";
+const Work = ({to}) => {
+const navigate = useNavigate();
+
   return (
     <section className="work">
       <div className="work-grid">
@@ -9,7 +12,7 @@ const Work = () => {
         ))}
       </div>
 
-      <button className="btn secondary">Explore more</button>
+      <button className="btn secondary" onClick={() => navigate(to)}>Explore more</button>
     </section>
   );
 };
