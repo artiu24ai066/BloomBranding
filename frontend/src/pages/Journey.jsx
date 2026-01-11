@@ -9,7 +9,7 @@ import img3 from "../assets/founder1.png";
 import team1 from "../assets/team1.png";
 import team2 from "../assets/team2.png";
 import team3 from "../assets/team3.png";
-import team4 from "../assets/team4.png";
+// import team4 from "../assets/team4.png";
 
 function Journey() {
   useEffect(() => {
@@ -125,7 +125,7 @@ function Journey() {
             </div>
             <div className="fourthCard reveal">
               <div className="meetimg move4 from-left">
-                <img src={team4} alt="" />
+                <img src={team3} alt="" />
               </div>
               <div className="meetText4 from-right">
                 <p>Our services extend beyond the lens, offering a spectrum of digital marketing solutions.
