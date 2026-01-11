@@ -1,8 +1,8 @@
 import "./Journey.css";
 import { useEffect } from "react";
 
-import Navbar from '../components/Navbar';
-import Footer from "../components/Footer";
+import Navbar from '../components/Navbar/Navbar';
+import Footer from "../components/Footer/Footer";
 import img1 from "../assets/inf3.png";
 import img2 from "../assets/prod1.png";
 import img3 from "../assets/founder1.png";
@@ -141,4 +141,3 @@ function Journey() {
 }
 
 export default Journey;
-

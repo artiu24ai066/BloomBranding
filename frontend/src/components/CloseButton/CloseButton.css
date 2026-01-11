@@ -1,0 +1,65 @@
+.close-btn {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 30px rgba(247,149,29,0.5);
+  transition: all .4s cubic-bezier(.215,.61,.355,1);
+}
+
+.close-btn > span {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 40px;
+  height: 8px;
+  background: #f5a700;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  transform-origin: center;
+  transition: all .4s cubic-bezier(.215,.61,.355,1);
+}
+
+.close-btn .left {
+  transform: rotate(45deg);
+}
+
+.close-btn .right {
+  transform: rotate(-45deg);
+}
+
+.close-btn span span {
+  width: 8px;
+  height: 8px;
+  background: #ed7f00;
+  border-radius: 50%;
+  position: absolute;
+  transition: all .4s cubic-bezier(.215,.61,.355,1);
+}
+
+.circle-left {
+  left: 0;
+}
+
+.circle-right {
+  left: 32px;
+}
+
+.close-btn:hover > span {
+  background: #2faee0;
+}
+
+.close-btn:hover span span {
+  background: #008ac9;
+}
+
+.close-btn:hover .circle-left {
+  left: 32px;
+}
+
+.close-btn:hover .circle-right {
+  left: 0;
+}

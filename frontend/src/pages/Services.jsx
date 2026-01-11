@@ -1,8 +1,8 @@
 import "./Services.css";
 
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import Brand from "../components/Brand.jsx";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import ServicesCard from "../components/ServicesCards";
 import SocialMedia from "../components/SocialMedia";
 import Product from "../components/Product";

@@ -1,8 +1,8 @@
-import "./OurWork.css";
+import "./Work.css";
 import WorkCardPair from "../components/WorkCardPair";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import BloomValues from "../components/BloomValues";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 
 import work1 from "../assets/work1.jpeg";
 import work2 from "../assets/work2.jpeg";
@@ -11,7 +11,7 @@ import work4 from "../assets/work4.jpeg";
 import work5 from "../assets/work5.jpeg";
 import work6 from "../assets/work6.jpeg";
 
-function OurWork() {
+function Work() {
   return (
     <>
       <Navbar />
@@ -60,4 +60,4 @@ function OurWork() {
   );
 }
 
-export default OurWork;
+export default Work;

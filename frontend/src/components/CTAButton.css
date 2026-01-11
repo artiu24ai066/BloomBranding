@@ -7,7 +7,7 @@
 }
 
 /* BUTTON BASE */
-button {
+#container button {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -20,12 +20,12 @@ button {
 }
 
 /* MAIN BUTTON */
-button.learn-more {
+#container button.learn-more {
   width: 12rem;
 }
 
 /* CIRCLE */
-button.learn-more .circle {
+#container button.learn-more .circle {
   position: relative;
   display: block;
 
@@ -33,25 +33,25 @@ button.learn-more .circle {
   height: 3rem;
   border-radius: 1.625rem;
 
-  background: #282936;
+  background: #482930;
 
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
 /* ICON */
-button.learn-more .circle .icon {
+#container button.learn-more .circle .icon {
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
 
-  background: #fff;
+  background: #EFEBCE;
 
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
 /* ARROW */
-button.learn-more .circle .icon.arrow {
+#container button.learn-more .circle .icon.arrow {
   left: 0.625rem;
   width: 1.125rem;
   height: 0.125rem;
@@ -59,7 +59,7 @@ button.learn-more .circle .icon.arrow {
 }
 
 /* ARROW HEAD */
-button.learn-more .circle .icon.arrow::before {
+#container button.learn-more .circle .icon.arrow::before {
   content: "";
   position: absolute;
   top: -0.25rem;
@@ -68,14 +68,14 @@ button.learn-more .circle .icon.arrow::before {
   width: 0.625rem;
   height: 0.625rem;
 
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
+  border-top: 0.125rem solid #EFEBCE;
+  border-right: 0.125rem solid #EFEBCE;
 
   transform: rotate(45deg);
 }
 
 /* TEXT */
-button.learn-more .button-text {
+#container button.learn-more .button-text {
   position: absolute;
   inset: 0;
 
@@ -87,23 +87,23 @@ button.learn-more .button-text {
   text-align: center;
   /* text-transform: uppercase; */
 
-  color: #282936;
+  color: #482930;
 
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 
 /* HOVER EFFECT */
-button.learn-more:hover .circle {
+#container button.learn-more:hover .circle {
   width: 100%;
 }
 
-button.learn-more:hover .circle .icon.arrow {
-  background: #fff;
+#container button.learn-more:hover .circle .icon.arrow {
+  background: #BB8588;
   transform: translateX(1rem);
 }
 
-button.learn-more:hover .button-text {
-  color: #fff;
+#container button.learn-more:hover .button-text {
+  color: #EFEBCE;
 }
 
 /* Optional: grid support for placing the CTA when needed — scoped to parent */

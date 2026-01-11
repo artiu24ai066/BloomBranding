@@ -1,13 +1,22 @@
 import "./CTAButton.css";
+import { useNavigate } from "react-router-dom";
 
-const CTAButton = ({ prompt = "View Experiences" }) => {
+const CTAButton = ({
+  prompt = "Let's get started",
+  to = "/get-started",
+}) => {
+  const navigate = useNavigate();
+
   return (
     <div id="container">
-      <button class="learn-more">
-        <span class="circle" aria-hidden="true">
-          <span class="icon arrow"></span>
+      <button
+        className="learn-more"
+        onClick={() => navigate(to)}
+      >
+        <span className="circle" aria-hidden="true">
+          <span className="icon arrow"></span>
         </span>
-        <span class="button-text">{prompt}</span>
+        <span className="button-text">{prompt}</span>
       </button>
     </div>
   );

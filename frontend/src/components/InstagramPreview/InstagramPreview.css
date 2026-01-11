@@ -1,0 +1,236 @@
+/* .instagram-preview {
+  min-height: 75vh; 
+  padding: 90px 80px;
+  background: #D8A48F;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+  position: relative;
+  overflow: hidden;
+
+} */
+ .instagram-preview {
+  position: relative;
+  min-height: 75vh;
+  padding: 90px 80px;
+  text-align: center;
+
+  /* ✨ Soft Bloom night-sky */
+  background: radial-gradient(
+      circle at top left,
+      rgba(239, 235, 206, 0.7),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(215, 206, 147, 0.6),
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      #D8A48F 0%,
+      #A3A380 100%
+    );
+
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+
+.instagram-preview.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header */
+.instagram-header h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #482930;
+}
+
+.instagram-header p {
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+  color: #482930;
+  opacity: 0.75;
+}
+
+/* Grid */
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* Card */
+.instagram-post {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #EFEBCE;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.instagram-post img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Hover */
+.instagram-post:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(72, 41, 48, 0.3);
+}
+
+.instagram-post:hover img {
+  transform: scale(1.06);
+}
+
+/* Overlay */
+.instagram-post .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(72, 41, 48, 0.45);
+  color: #EFEBCE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.instagram-post:hover .overlay {
+  opacity: 1;
+}
+
+/* CTA spacing only (button styles come from CTAButton) */
+.instagram-cta {
+  margin-top: 55px;
+}
+
+
+
+
+.insta-stars {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(239, 235, 206, 0.9);
+  z-index: 1;
+
+  box-shadow:
+    5vw 10vh 2px rgba(239,235,206,0.8),
+    15vw 25vh 1px rgba(239,235,206,0.6),
+    25vw 18vh 2px rgba(239,235,206,0.8),
+    35vw 40vh 1px rgba(239,235,206,0.6),
+    45vw 30vh 2px rgba(239,235,206,0.8),
+    55vw 50vh 1px rgba(239,235,206,0.6),
+    65vw 22vh 2px rgba(239,235,206,0.8),
+    75vw 45vh 1px rgba(239,235,206,0.6),
+    85vw 35vh 2px rgba(239,235,206,0.8),
+    95vw 55vh 1px rgba(239,235,206,0.6);
+
+  animation: insta-twinkle 8s infinite linear;
+}
+
+@keyframes insta-twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}
+
+
+
+
+.insta-shooting-star {
+  position: absolute;
+  top: 20%;
+  left: -120px;
+  width: 120px;
+  height: 2px;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(163, 163, 128, 0.9),
+    rgba(163, 163, 128, 0)
+  );
+
+  animation: insta-shoot 4.5s ease-in infinite;
+}
+
+.insta-shooting-star:nth-child(2) {
+  top: 46%;
+  animation-delay: 1.5s;
+  animation-duration: 5.5s;
+}
+
+.insta-shooting-star:nth-child(3) {
+  top: 65%;
+  animation-delay: 3s;
+  animation-duration: 6s;
+}
+
+.insta-shooting-star:nth-child(4) {
+  top: 30%;
+  animation-delay: 0.8s;
+  animation-duration: 4.8s;
+}
+
+.insta-shooting-star:nth-child(5) {
+  top: 55%;
+  animation-delay: 2.2s;
+  animation-duration: 3.2s;
+}
+
+.insta-shooting-star:nth-child(6) {
+  top: 75%;
+  animation-delay: 3.8s;
+  animation-duration: 5.9s;
+}
+.insta-shooting-star:nth-child(7) {
+  top: 20%;
+  animation-delay: 4.4s;
+  animation-duration: 4.7s;
+}
+.insta-shooting-star:nth-child(8) {
+  top: 90%;
+  animation-delay: 5s;
+  animation-duration: 3.8s;
+}
+.insta-shooting-star:nth-child(9) {
+  top: 37%;
+  animation-delay: 2.8s;
+  animation-duration: 4.2s;
+}
+
+
+@keyframes insta-shoot {
+  0% {
+    transform: translateX(0) translateY(0) rotate(22deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120vw) translateY(40vh) rotate(22deg);
+    opacity: 0;
+  }
+}
+
+
+.instagram-preview > *:not(.insta-stars):not(.insta-shooting-star) {
+  position: relative;
+  z-index: 2;
+}
+

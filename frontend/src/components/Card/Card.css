@@ -1,0 +1,29 @@
+
+.floating-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 300px;
+  background: #d7ce93;
+  border-radius: 16px;
+  overflow: hidden;
+  pointer-events: none; 
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease-out;
+  z-index: 200;
+  border: 1px solid rgba(72, 41, 48, 0.12);
+}
+
+.floating-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.floating-card p {
+  margin: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #482930;
+} 

@@ -1,0 +1,30 @@
+.getstarted-navbar {
+  position: fixed;
+  top: 50;
+  width: 100%;
+  height: 90px;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(190, 198, 195, 0.78);
+  backdrop-filter: blur(12px);
+
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.gs-nav-center {
+  font-family: "Calligraffitti", cursive;
+  font-size: 4rem;
+  color: #004d40;
+  white-space: nowrap;
+}
+
+.gs-nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
