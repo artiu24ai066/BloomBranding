@@ -1,5 +1,5 @@
 import "./Contact.css";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 function Contact() {
 	return (
 		<section className="contact-section">
