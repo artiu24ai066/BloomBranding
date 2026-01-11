@@ -34,7 +34,12 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${visible ? "show" : "hide"}`}>
       <div className="nav-left">
-        <img src={logo} alt="Bloom Branding Logo" />
+        <img
+    src={logo}
+    alt="Bloom Branding Logo"
+    className="nav-logo"
+    onClick={() => navigate("/")}
+  />
       </div>
 
       <div className="nav-center">
@@ -44,7 +49,7 @@ const Navbar = () => {
       <div className="nav-right">
         <CTAButton
           prompt="Let’s Get Started"
-          onClick={() => navigate("/get-started")}
+          onClick={() => navigate("/menu")}
         />
       </div>
     </nav>

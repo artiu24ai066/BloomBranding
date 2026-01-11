@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const CTAButton = ({
   prompt = "Let's get started",
-  to = "/get-started",
+  to = "/menu",
 }) => {
   const navigate = useNavigate();
 

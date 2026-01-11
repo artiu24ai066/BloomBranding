@@ -1,4 +1,5 @@
 import CTAButton from "./CTAButton";
+import GetStartedNavbar from "./GetStartedNavbar/GetStartedNavbar";
 const MenuOverlay = ({ onClose }) => {
     const menuItems = [
         { label: "Our Journey", icon: "/menu-icon-journey.svg", color: "journey" },
@@ -8,7 +9,7 @@ const MenuOverlay = ({ onClose }) => {
 
     return (
         <div className="menu-overlay">
-            {/* Top Bar */}
+            {/* Top Bar
             <div className="menu-top">
                 <button className="close-btn" onClick={onClose}>
                     ✕
@@ -16,8 +17,9 @@ const MenuOverlay = ({ onClose }) => {
 
                 <h3 className="menu-brand-title">Bloom Branding</h3>
                 <CTAButton prompt={"Get in Touch"} />
-            </div>
+            </div> */}
 
+            <GetStartedNavbar/>
             {/* Main Content */}
             <div className="menu-content">
                 <div className="menu-links">

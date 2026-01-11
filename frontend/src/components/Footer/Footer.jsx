@@ -20,7 +20,7 @@ const Footer = () => {
       <ul className="footer-links">
         {[
           { name: "Home", to: "/" },
-          { name: "Our Journey", to: "/our-journey" },
+          { name: "Our Journey", to: "/journey" },
           { name: "Services", to: "/services" },
           { name: "Our Work", to: "/work" },
           { name: "Contact", to: "/contact" },
