@@ -24,7 +24,7 @@ const MenuOverlay = ({ onClose }) => {
                     <h3 className="discover">Discover More</h3>
                     {/* <h3>Discover More</h3> */}
                     {menuItems.map((item, index) => (
-                        <button 
+                        <button
                             key={index}
                             className={`menu-link ${index === 0 ? "active" : ""} ${item.color}`}
                         >
@@ -34,12 +34,20 @@ const MenuOverlay = ({ onClose }) => {
                     ))}
                 </div>
 
-                <div className="menu-text">
-                    <p className="menu-subtitle">Every Brand has a</p>
-                    <h2 className="menu-highlight story">STORY</h2>
-                    <p className="menu-subtitle">We make yours</p>
-                    <h2 className="menu-highlight bloom">BLOOM</h2>
+                <div className="menu-text type-container">
+                    <p className="type-line">Every Brand has a</p>
+
+                    <h2 className="type-word gradient-story">
+                        STORY
+                    </h2>
+
+                    <p className="type-line delay">We make yours</p>
+
+                    <h2 className="type-word gradient-bloom">
+                        BLOOM
+                    </h2>
                 </div>
+
             </div>
         </div>
     );

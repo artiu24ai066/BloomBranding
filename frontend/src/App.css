@@ -324,4 +324,181 @@ transform: translateY(-105px);
 .menu-link.services {
   background: #f2b87b;
   color: #333;
+}/* ===============================
+   RIGHT-SIDE TYPING EFFECT
+================================ */
+
+.type-container {
+  text-align: right;
+  overflow: hidden;
+}
+
+/* SMALL TEXT LINES */
+.type-line {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  color: #334548;
+
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+
+  animation: typeReveal 1.8s steps(40, end) forwards;
+}
+
+/* .type-line.delay {
+  animation-delay: 3.2s;
+} */
+
+/* BIG WORDS */
+.type-word {
+  font-size: 120px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  margin: 0 0 24px 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+
+  animation: wordReveal 2.4s steps(40, end) forwards;
+  animation-delay: 1.6s;
+}
+
+/* BLOOM appears later */
+.gradient-bloom {
+  animation-delay: 4.8s;
+}
+
+/* ===============================
+   GRADIENT TEXT (VISIBLE + ANIMATED)
+================================ */
+
+/* STORY */
+.gradient-story {
+  background: linear-gradient(
+    90deg,
+    #f2b87b,
+    #e89f5b,
+    #ffd6a0,
+    #f2b87b
+  );
+  background-size: 300% 100%;
+  animation: wordReveal 2.4s steps(40, end) forwards,
+             gradientMove 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* BLOOM */
+.gradient-bloom {
+  background: linear-gradient(
+    90deg,
+    #4da3a6,
+    #7fd3d6,
+    #4da3a6
+  );
+  background-size: 300% 100%;
+  animation: wordReveal 2.4s steps(40, end) forwards,
+             gradientMove 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   KEYFRAMES
+================================ */
+
+@keyframes typeReveal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes wordReveal {
+  0% {
+    width: 0;
+    border-right: 2px solid rgba(0,0,0,0.4);
+  }
+  70% {
+    border-right: 2px solid rgba(0,0,0,0.4);
+  }
+  100% {
+    width: 100%;
+    border-right: none;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+/* .typing.delay::after {
+  animation-delay: 2.2s;
+} */
+
+/* .typing.delay2::after {
+  animation-delay: 0s;
+} */
+.typing {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.typing::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #d0d8d4; /* same as menu background */
+  animation: revealText 1.8s steps(30, end) forwards;
+}
+.typing.small {
+  font-size: 28px;
+  font-family: "Playfair Display", serif;
+  color: #334548;
+}
+
+.typing.big {
+  font-size: 120px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  line-height: 1.1;
+}
+.gradient-story {
+  background: linear-gradient(
+    90deg,
+    #ffb96d,
+    #e37a19,
+    #ffd6a0
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bloom {
+  background: linear-gradient(
+    90deg,
+    #4da3a6,
+    #7fd3d6,
+    #39f0f6
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes revealText {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
 }

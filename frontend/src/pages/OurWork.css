@@ -1,9 +1,12 @@
 /* ===== OUR WORK PAGE ===== */
 
 .our-work {
-  background: #d6dfdb;
-  padding: 0;
-  font-family: "Segoe UI", sans-serif;
+  position: relative;
+  z-index: 1;
+  background: transparent; /* allow animated bg to show */
+}
+.sticky-section {
+  background: transparent; /* instead of solid #d6dfdb */
 }
 
 .ourwork-top {

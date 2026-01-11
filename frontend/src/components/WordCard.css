@@ -1,10 +1,10 @@
 /* Reset */
 * {
   box-sizing: border-box;
+  /* background:transparent; */
 }
 
 .pair {
-  /* background-color: #3f4a54; */
   padding: 40px;
   border-radius: 18px;
 
@@ -14,8 +14,6 @@
   margin: 0 auto;
   justify-content: space-evenly;
 }
-
-
 /* Card container */
 .hover-card {
   width: 430px;
@@ -92,4 +90,62 @@
   justify-content: center;
 
   background: #d6dfdb; /* your site background */
+}
+/* ===============================
+   STICKY + BACKGROUND FIX
+================================ */
+
+.sticky-section {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.pair-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.pair-bg {
+  position: absolute;
+  inset: 0;
+  left: -50%;
+  right: -50%;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  opacity: 0.35;
+  animation: slideBg 6s ease-in-out infinite alternate;
+}
+
+/* variations */
+.pair-bg.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 8s;
+  opacity: 0.25;
+}
+
+.pair-bg.bg3 {
+  animation-duration: 10s;
+  opacity: 0.2;
+}
+
+/* animation */
+@keyframes slideBg {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+.pair {
+  position: relative;
+  z-index: 2;
 }
