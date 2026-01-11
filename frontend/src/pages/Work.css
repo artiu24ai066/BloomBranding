@@ -3,7 +3,8 @@
 .our-work {
   position: relative;
   z-index: 1;
-  background: transparent; /* allow animated bg to show */
+  background: transparent;
+  padding-top: 110px; /* allow animated bg to show */
 }
 .sticky-section {
   background: transparent; /* instead of solid #d6dfdb */
@@ -15,6 +16,7 @@
 }
 
 .ourwork-text {
+  /* margin-top: 4rem; */
   background: #3f4a54;
   color: #eaeaea;
   padding: 10px;

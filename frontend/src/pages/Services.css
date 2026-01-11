@@ -86,7 +86,7 @@
   height: 420px;
   top: 50px;
   right: -40px;
-  transform: translateX(-20px);
+  transform: translateX(40px);
 }
 
 .services-next {
